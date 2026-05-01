@@ -5,7 +5,7 @@ const os = require('os');
 
 const SETTINGS_PATH = path.join(os.homedir(), '.claude', 'settings.json');
 const HOOK_PATH = path.resolve(__dirname, 'hook.sh');
-const HOOK_EVENTS = ['PreToolUse', 'PostToolUse', 'Notification', 'Stop'];
+const HOOK_EVENTS = ['SessionStart', 'PreToolUse', 'PostToolUse', 'Notification', 'Stop'];
 
 if (!fs.existsSync(SETTINGS_PATH)) {
   console.log('No settings.json found — nothing to uninstall.');
